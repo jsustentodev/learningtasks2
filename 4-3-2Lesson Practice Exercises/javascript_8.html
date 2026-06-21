@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>.: Javascript 08 :.</title>
+        <script>
+            
+            function areaOfSquare() {
+                let side = document.getElementById("sideOfSquare");
+                if (side.value != "") {
+                    let area = parseFloat(side.value) * parseFloat(side.value);
+                    alert("Area of square is " + area);
+                }
+                else {
+                    alert("Side of square is empty!");
+                    side.focus();
+                }
+            }
+
+            
+            function areaOfRectangle() {
+                let length = document.getElementById("lengthOfRectangle");
+                let width = document.getElementById("widthOfRectangle");
+                if (length.value == "") {
+                    alert("Length of rectangle is empty!");
+                    length.focus();
+                }
+                else if (width.value == "") {
+                    alert("Width of rectangle is empty!");
+                    width.focus();
+                }
+                else {
+                    let area = parseFloat(length.value) * parseFloat(width.value);
+                    alert("Area of rectangle is " + area);
+                }
+            }
+
+            
+            function areaOfTriangle() {
+                let base = document.getElementById("baseOfTriangle");
+                let height = document.getElementById("heightOfTriangle");
+                if (base.value == "") {
+                    alert("Base of triangle is empty!");
+                    base.focus();
+                }
+                else if (height.value == "") {
+                    alert("Height of triangle is empty!");
+                    height.focus();
+                }
+                else {
+                    let area = 0.5 * parseFloat(base.value) * parseFloat(height.value);
+                    alert("Area of triangle is " + area);
+                }
+            }
+
+            
+            function areaOfCircle() {
+                let radius = document.getElementById("radiusOfCircle");
+                if (radius.value != "") {
+                    // Using 3.1416 for Pi
+                    let area = 3.1416 * parseFloat(radius.value) * parseFloat(radius.value);
+                    alert("Area of circle is " + area);
+                }
+                else {
+                    alert("Radius of circle is empty!");
+                    radius.focus();
+                }
+            }
+
+            
+            function areaOfTrapeziod() {
+                let baseA = document.getElementById("baseAOfTrapeziod");
+                let baseB = document.getElementById("baseBOfTrapeziod");
+                let height = document.getElementById("heightOfTrapeziod");
+                if (baseA.value == "") {
+                    alert("Base A of trapeziod is empty!");
+                    baseA.focus();
+                }
+                else if (baseB.value == "") {
+                    alert("Base B of trapeziod is empty!");
+                    baseB.focus();
+                }
+                else if (height.value == "") {
+                    alert("Height of trapeziod is empty!");
+                    height.focus();
+                }
+                else {
+                    let area = 0.5 * (parseFloat(baseA.value) + parseFloat(baseB.value)) * parseFloat(height.value);
+                    alert("Area of trapeziod is " + area);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <a name="top"></a>
+        <h1>length calculator</h1>
+        <p>
+            Create a calulator for the following shapes
+            <ol>
+                <li><a href="#area-of-square">Area of square</a></li>
+                <li><a href="#area-of-rectangle">Area of rectangle</a></li>
+                <li><a href="#area-of-triangle">Area of triangle</a></li>
+                <li><a href="#area-of-circle">Area of circle</a></li>
+                <li><a href="#area-of-trapeziod">Area of trapeziod</a></li>
+            </ol>
+        </p>
+        
+     </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+
+        <a name="area-of-square"></a>
+        <h2>Area of square</h2>
+        <label>Side</label><br>
+        <input type="text" id="sideOfSquare"><br>
+        <button onclick="return areaOfSquare()">Compute for area of square</button><br>
+        <a href="#top">Top</a>
+
+     </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+
+        <a name="area-of-rectangle"></a>
+        <h2>Area of rectangle</h2>
+        <label>Length</label><br>
+        <input type="text" id="lengthOfRectangle"><br>
+        <label>Width</label><br>
+        <input type="text" id="widthOfRectangle"><br>
+        <button onclick="return areaOfRectangle()">Compute for area of rectangle</button><br>
+        <a href="#top">Top</a>
+
+     </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+
+        <a name="area-of-triangle"></a>
+        <h2>Area of triangle</h2>
+        <label>Base</label><br>
+        <input type="text" id="baseOfTriangle"><br>
+        <label>Height</label><br>
+        <input type="text" id="heightOfTriangle"><br>
+        <button onclick="return areaOfTriangle()">Compute for area of triangle</button><br>
+        <a href="#top">Top</a>
+
+     </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+
+        <a name="area-of-circle"></a>
+        <h2>Area of circle</h2>
+        <label>Radius</label><br>
+        <input type="text" id="radiusOfCircle"><br>
+        <button onclick="return areaOfCircle()">Compute for area of circle</button><br>
+        <a href="#top">Top</a>
+
+     </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+
+        <a name="area-of-trapeziod"></a>
+        <h2>Area of trapeziod</h2>
+        <label>Base A (Top)</label><br>
+        <input type="text" id="baseAOfTrapeziod"><br>
+        <label>Base B (Bottom)</label><br>
+        <input type="text" id="baseBOfTrapeziod"><br>
+        <label>Height</label><br>
+        <input type="text" id="heightOfTrapeziod"><br>
+        <button onclick="return areaOfTrapeziod()">Compute for area of trapeziod</button><br>
+        <a href="#top">Top</a>
+
+     </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+    </body>
+</html>\

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>..:JAVASCRIPT 05:..</title>
+        <script>
+            function getName() {
+                let name = document.getElementById("txtName").value;
+                let password = document.getElementById("passPassword").value;
+
+                if (name == "admin" && password == "password") {
+                      window.location = "javascript_2.html";
+                } else {
+                      document.getElementById("result").innerHTML = "Invalid username or password";
+                }
+            }
+        </script>
+        <body>
+            <label>What is my name</label></br>
+            <input type="text" id="txtName"></br>
+            <label>What is my password</label></br>
+            <input type="password" id="passPassword"></br>
+            <button onClick="return getName()">Submit</button>
+            <div id="result"></div>
+        </body>
+    </head>
+</html>
