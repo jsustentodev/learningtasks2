@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>.:javascript 04:.</title>
+        <script>
+            function getName() {
+                let name = document.getElementById("txtName").value;
+                let password = document.getElementById("passPassword").value;
+
+             
+                if (name == "Johnson" && password == "12345") {
+                    document.getElementById("name").innerHTML = name + " you have access !";
+                } else {
+                    document.getElementById("name").innerHTML = "Access Denied: Invalid login credentials !";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <label>What is my name</label><br>
+        <input type="text" id="txtName"><br>
+        <label>What is my password</label><br>
+        <input type="password" id="passPassword"><br>
+        <button onClick="return getName()">Login</button>
+        <div id="name">Please enter your login credentials</div>
+    </body>
+</html>
